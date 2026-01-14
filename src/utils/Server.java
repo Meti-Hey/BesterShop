@@ -1,3 +1,4 @@
+package utils;
 import java.net.*;
 import java.io.*;
 
@@ -31,7 +32,10 @@ public abstract class Server{
   private NewConnectionHandler connectionHandler;
   private List<ClientMessageHandler> messageHandlers;
 
-  private class NewConnectionHandler extends Thread{
+    protected Server() {
+    }
+
+    private class NewConnectionHandler extends Thread{
     private ServerSocket serverSocket;
     private boolean active;
 

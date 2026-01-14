@@ -1,11 +1,20 @@
-public class ShopClient {
+import utils.Client;
 
-    ShopClient(String ServerIP, int pServerPort)
+public abstract class ShopClient extends Client {
+    public ShopClient(String pServerIP, int pServerPort)
     {
-        super(pServerIP, pServerport);
+        super(pServerIP, pServerPort);
     }
 
-    public void groesse farbeWaehlen (String pGroesse ,String pFarbe){
-        this.send("TSHIRT:")
+    public void groesseFarbeWaehlen (String pGroesse ,String pFarbe){
+        this.send("TSHIRT:"+ pGroesse+ ":" +pFarbe);
+    }
+    public void bestaetigen (String pAntwort)
+    {
+        this.send ("BESTAETIGUNG:"+pAntwort);
+    }
+    public void abmelden()
+    {
+        this.send("ABMELDEN");
     }
 }

@@ -1,6 +1,6 @@
 import utils.Server;
 
-public abstract class ShopServer extends Server {
+public class ShopServer extends Server {
 
     public ShopServer(int pPort) {
         super(pPort);
@@ -33,5 +33,6 @@ public abstract class ShopServer extends Server {
             }
         }
     }
+    public void processClosingConnection(String pClientIP, int pClientPort){}
 
 }

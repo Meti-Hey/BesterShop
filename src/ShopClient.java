@@ -1,14 +1,9 @@
 import utils.Client;
 
-public  class ShopClient extends Client {
+public abstract class ShopClient extends Client {
     public ShopClient(String pServerIP, int pServerPort)
     {
         super(pServerIP, pServerPort);
-    }
-
-    @Override
-    public void processMessage(String pMessage) {
-        System.out.println(pMessage);
     }
 
     public void groesseFarbeWaehlen (String pGroesse ,String pFarbe){

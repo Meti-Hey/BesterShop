@@ -10,7 +10,7 @@ public class Main {
         Scanner scanner =new Scanner(System.in);
 
         //wichti ist, das der sever und der Client denselben Port nutzten
-        ShopSever server =new ShopSever(16);
+        ShopServer server =new ShopServer(16);
         ShopClient kunde = new ShopClient("localhost",16);
 
         Thread.sleep(45);
@@ -34,7 +34,7 @@ public class Main {
                 kunde.bestaetigen(antwort);
             }
 
-            }
+
             else if (auswahl == 4){
                 kunde.abmelden();
             }
